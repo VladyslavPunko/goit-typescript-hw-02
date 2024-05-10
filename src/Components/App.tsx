@@ -16,6 +16,7 @@ export interface Photo {
   };
   alt_description: string;
   urlModal: string;
+  description: string;
 }
 
 export interface FetchPhotoResponse {

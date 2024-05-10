@@ -1,7 +1,6 @@
 import css from "./ErrorMessage.module.css";
-import { FC } from "react";
 
-const ErrorMessage: FC = () => {
+const ErrorMessage = () => {
   return (
     <div className={css.wrap}>
       <p className={css.text}>
