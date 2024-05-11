@@ -1,8 +1,9 @@
 import css from "./ImageCard.module.css";
 
-import { Photo } from "../App";
-
-export interface ImageCardProps extends Photo {
+export interface ImageCardProps {
+  url: string;
+  description: string;
+  urlModal: string;
   openModal: (urlModal: string, description: string) => void;
 }
 const ImageCard = ({

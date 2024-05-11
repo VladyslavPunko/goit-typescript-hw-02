@@ -32,7 +32,7 @@ function App() {
   const [error, setError] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
   const [showBtn, setShowBtn] = useState<boolean>(false);
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [imageSrc, setImageSrc] = useState<null | string>(null);
   const [description, setDescription] = useState<string | null>("");
 
   useEffect(() => {

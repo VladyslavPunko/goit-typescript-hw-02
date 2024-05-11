@@ -6,7 +6,7 @@ import { Photo } from "../App";
 
 export interface ImageGalleryProps {
   photos: Photo[];
-  openModal: () => void;
+  openModal: (urlModal: string, description: string) => void;
 }
 
 const ImageGallery = ({ photos, openModal }: ImageGalleryProps) => {
