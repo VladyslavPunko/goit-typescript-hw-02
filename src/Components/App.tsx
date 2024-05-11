@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "../Components/App.css";
 import SearchBar from "./SearchBar/SearchBar";
 import { fetchPhotosByInput } from "../photos-api";
 import ImageGallery from "./ImageGallery/ImageGallery";
