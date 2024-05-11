@@ -34,16 +34,15 @@ function App() {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>("");
 
-  useEffect((): void | (() => void) => {
+  useEffect(() => {
     if (!inputSearch) return;
 
-    async function fetchPhotos() {
+    async function fetchPhotos(): Promise<void> | never {
       try {
         setLoading(true);
-        const { total_pages, results } = await fetchPhotosByInput(
-          inputSearch,
-          page
-        );
+        setError(false);
+        const { total_pages, results }: FetchPhotoResponse =
+          await fetchPhotosByInput(inputSearch, page);
         setPhotos((prevPhotos) => [...prevPhotos, ...results]);
         setShowBtn(total_pages > page);
       } catch (error) {

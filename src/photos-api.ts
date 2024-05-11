@@ -2,7 +2,7 @@ import axios from "axios";
 let perPage = 15;
 
 export async function fetchPhotosByInput<T>(
-  inputSearch: HTMLInputElement,
+  inputSearch: string,
   page: number
 ): Promise<T> {
   const ACCESS = "oyaKjse9erYpC8_merX5E1mvW6IUZrjoER6jMTgJ_Rs";
