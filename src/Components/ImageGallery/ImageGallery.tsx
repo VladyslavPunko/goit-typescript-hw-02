@@ -2,7 +2,14 @@ import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 import { useRef } from "react";
 
-const ImageGallery = ({ photos, openModal }) => {
+import { Photo } from "../App";
+
+export interface ImageGalleryProps {
+  photos: Photo[];
+  openModal: () => void;
+}
+
+const ImageGallery = ({ photos, openModal }: ImageGalleryProps) => {
   const lastPhotoRef = useRef(null);
 
   return (
@@ -18,7 +25,6 @@ const ImageGallery = ({ photos, openModal }) => {
             description={photo.alt_description}
             urlModal={photo.urls.regular}
             openModal={openModal}
-            а
           />
         </li>
       ))}
